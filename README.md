@@ -5,6 +5,9 @@ Bootstrapped Rails
 Generic application I created to get started with Rails application.
 
 - Supports Many Roles using Rolify
+- Puma
+- Pundit
+- Devise
 
 Issues?
 
