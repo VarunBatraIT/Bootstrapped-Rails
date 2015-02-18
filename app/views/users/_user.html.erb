@@ -1,0 +1,13 @@
+<td>
+  <%= link_to user.email, user %>
+</td>
+<td>
+  <ul class="list-unstyled">
+    <% User.all_roles.each do |role| %>
+        <%== ("<li>#{role}</li>") if user.has_role?(role) %>
+    <% end %>
+  </ul>
+</td>
+<td>
+  <%= link_to("Delete user", user_path(user), :data => {:confirm => "Are you sure?"}, :method => :delete, :class => 'button-xs') unless user == current_user %>
+</td>
